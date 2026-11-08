@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino's Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; background:#eef5ff; color:#263238; margin:0; }
+        header { background:#1565c0; color:white; text-align:center; padding:25px; }
+        nav { background:#0d47a1; text-align:center; padding:12px; }
+        nav a { color:white; text-decoration:none; margin:15px; font-weight:bold; }
+        nav a:hover { color:#ffeb3b; }
+        section { background:white; margin:20px auto; padding:20px; width:80%; max-width:850px; border-radius:10px; box-shadow:0 3px 8px #00000015; }
+        h2 { color:#00897b; }
+        .highlight { color:#1565c0; font-weight:bold; }
+        button { background:#00897b; color:white; border:0; padding:10px 18px; border-radius:5px; cursor:pointer; }
+        button:hover { background:#00695c; }
+        input, textarea { width:100%; max-width:500px; padding:10px; margin-top:6px; border:1px solid #b0bec5; border-radius:5px; font:inherit; box-sizing:border-box; }
+        footer { background:#1565c0; color:white; text-align:center; padding:15px; margin-top:30px; }
+        .email-box { background:#eef5ff; padding:12px; border-radius:6px; display:inline-block; }
+        .note { color:#607d8b; font-size:.9rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Dino's Website</h1>
+        <p>A simple website created with HTML, CSS, and JavaScript.</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>Home</h2>
+        <p>Hello! Welcome to my website. I am <span class="highlight">Dino</span>.</p>
+        <p>This website shows some basic web design skills.</p>
+        <button type="button" onclick="showMessage()">Click Me</button>
+        <p id="message"></p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am learning how to create websites and use technology creatively.</p>
+        <p>My goal is to improve my computer skills and learn new things.</p>
+    </section>
+
+    <section id="hobbies">
+        <h2>My Hobbies</h2>
+        <ul>
+            <li>Learning technology</li>
+            <li>Listening to music</li>
+            <li>Playing games</li>
+            <li>Creating websites</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>You can contact me at:</p>
+        <p class="email-box"><strong>daakedodoo@gmail.com</strong></p>
+
+        <h3>Send Me a Message</h3>
+        <p>Fill in the form below. Your message will be emailed to Dino.</p>
+
+        <form action="https://formsubmit.co/daakedodoo@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New message from Dino's website">
+            <input type="hidden" name="_template" value="table">
+
+            <!-- Hidden anti-spam field. Leave it empty. -->
+            <input type="text" name="_honey" style="display:none">
+
+            <label for="visitor">Your Name:</label><br>
+            <input type="text" id="visitor" name="name" placeholder="Enter your name" required><br><br>
+
+            <label for="visitorEmail">Your Email:</label><br>
+            <input type="email" id="visitorEmail" name="email" placeholder="you@example.com" required><br><br>
+
+            <label for="note">Your Message:</label><br>
+            <textarea id="note" name="message" rows="4" placeholder="Write your message..." required></textarea><br><br>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <p class="note">The form is connected to an email form service. The first time you use it, you may need to confirm your email address with the service.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Dino's Website | Created for learning</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "Thanks for visiting my website!";
+        }
+    </script>
+</body>
+</html>
